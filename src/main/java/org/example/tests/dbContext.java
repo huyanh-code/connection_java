@@ -1,4 +1,4 @@
-package org.example;
+package org.example.test;
 
 import java.sql.*;
 
@@ -12,9 +12,9 @@ public class dbContext {
     public static void main(String[] args) {
 
 //        conected();
-//        insert();
+        insert();
 //        update();
-        delete();
+//        delete();
     }
 
     private static void conected() {
@@ -43,8 +43,8 @@ public class dbContext {
         try {
             Connection conn = getConnection(DB_URL, USER_NAME, PASSWORD);
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, "Huy Anh");
-            stmt.setInt(2, 18);
+            stmt.setString(1, "Vu Anh Ngoc");
+            stmt.setInt(2, 20);
             stmt.execute();
             System.out.println("Them thanh cong student!");
         } catch (SQLException e) {
